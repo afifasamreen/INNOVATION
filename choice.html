@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote for Your Favorite Party</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: "Arial", sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.voting-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: #007BFF;
+    font-size: 24px;
+}
+
+.party {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+label:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.party-content {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+span {
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the selected party */
+label input[type="radio"]:checked + .party-content {
+    background-color: #007BFF;
+    color: #fff;
+    
+}
+
+</style>
+<body>
+    <div class="voting-container">
+        <h1>Vote for Your Favorite Party</h1>
+        <form action="vote.php" method="post">
+            <div class="party">
+                <label>
+                    <input type="radio" name="party1" value="party1">
+                    <div class="party-content">
+                        <img src="party1.jpg" alt="Party 1 Icon">
+                        <span>A</span>
+                    </div>
+                </label>
+            </div>
+            <div class="party">
+                <label>
+                    <input type="radio" name="party2" value="party2">
+                    <div class="party-content">
+                        <img src="party2.jpeg" alt="Party 2 Icon">
+                        <span>B</span>
+                    </div>
+                </label>
+            </div>
+            <div class="party">
+                <label>
+                    <input type="radio" name="party3" value="party3">
+                    <div class="party-content">
+                        <img src="party3.jpg" alt="Party 3 Icon">
+                        <span>C</span>
+                    </div>
+                </label>
+            </div>
+            <!-- Add more parties with images and names as needed -->
+            <button type="submit">Vote</button>
+        </form>
+    </div>
+</body>
+</html>
